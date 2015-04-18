@@ -3,7 +3,7 @@ This app was built for Meteor js lessons. It is based on <a href="https://www.di
 <p></p>
 The app is a catalog of lessons. 
 <p></p>
-The administrator can add a new lesson which has:
+Administrator can add a new lesson which has:
 <ul>
 <li>Title</li>
 <li>Location</li>
@@ -11,7 +11,7 @@ The administrator can add a new lesson which has:
 <li>Time</li>
 <li>Description</li>
 </ul>
-A user can see the list of lessons and navigate into a lesson for more details. In addition, he can add a comment/feedback to the lesson only if he is logged in. After the user add a feedback administrator receive a notification.
+A user can see the list of lessons and navigate into a lesson for more details. In addition, he can add a comment/feedback and vote (up or down) for a lesson only if he is logged in. After the user add a feedback administrator receive a notification.
 <p></p>
 The repository separated into chapters
 
