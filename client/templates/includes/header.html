@@ -12,7 +12,7 @@
     </div>
     <div class="collapse navbar-collapse" id="navigation">
       <ul class="nav navbar-nav">
-        {{#if currentUser}}
+        {{#if isInRole 'admin'}}
           <li><a href="{{pathFor 'lessonSubmit'}}">Submit Lesson</a></li>
         {{/if}}
       </ul>
