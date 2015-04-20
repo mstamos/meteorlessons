@@ -8,7 +8,11 @@ Template.lessonSubmit.events({
       location: $(e.target).find('[name=location]').val(),
       description: $(e.target).find('[name=description]').val()
     };
-   lesson._id = Lessons.insert(lesson);
-   Router.go('lessonPage', lesson);
+   Meteor.call('lessonInsert', lesson, function(error, result) {
+     // display the error to the user and abort
+      if (error)
+        return alert(error.reason);
+      Router.go('lessonPage', {_id: result._id});
+   });
   }
 });
