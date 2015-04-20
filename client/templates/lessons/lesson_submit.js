@@ -12,6 +12,9 @@ Template.lessonSubmit.events({
      // display the error to the user and abort
       if (error)
         return alert(error.reason);
+      // show this result but route anyway
+      if (result.lessonExists)
+         alert('This lesson has already been published');
       Router.go('lessonPage', {_id: result._id});
    });
   }
