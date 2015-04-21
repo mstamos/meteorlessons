@@ -12,8 +12,8 @@ Template.lessonEdit.events({
     Lessons.update(currentLessonId, {$set: lesonProperties}, function(error) {
       if (error) {
         // display the error to the user
-        // alert(error.reason);
-        //
+        throwError(error.reason);
+        
       } else {
         Router.go('lessonPage', {_id: currentLessonId});
       }
