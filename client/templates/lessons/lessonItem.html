@@ -9,6 +9,10 @@
         <div>
           <span class="info">Where?</span>  {{location}}
         </div>
+        <p>
+          submitted by {{author}}
+          {{#if ownLesson}}<a href="{{pathFor 'lessonEdit'}}">Edit</a>{{/if}}
+        </p>
       </div>
       <a href="{{pathFor 'lessonPage'}}" class="discuss btn btn-default">Discuss</a>
     </div>
