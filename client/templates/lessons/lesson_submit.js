@@ -22,10 +22,11 @@ Template.lessonSubmit.events({
       time: $(e.target).find('[name=time]').val(),
       date: $(e.target).find('[name=date]').val(),
       location: $(e.target).find('[name=location]').val(),
+      presentationUrl: $(e.target).find('[name=presentationUrl]').val(),
       description: $(e.target).find('[name=description]').val()
     };
 
-    var errors = validatePost(lesson);
+    var errors = validateLesson(lesson);
     if (errors.title || errors.time || errors.date || errors.description || errors.presentationUrl || errors.location)
       return Session.set('lessonSubmitErrors', errors);
 
