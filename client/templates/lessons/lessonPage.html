@@ -1,5 +1,12 @@
 <template name="lessonPage">
   <div class="lesson-page page">
     {{> lessonItem}}
+
+    <ul class="comments">
+		{{#each comments}}
+		{{> commentItem}}
+		{{/each}}
+	</ul>
+	
   </div>
 </template>
