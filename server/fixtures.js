@@ -14,7 +14,7 @@ if (Lessons.find().count() === 0) {
   });
   
   Lessons.insert({
-    title: 'Installation and basic concepts.',
+    title: 'Learning Meteor by create an example application.',
     date: '19/5/2015',
     time: '19:30',
     location: 'SciFy'

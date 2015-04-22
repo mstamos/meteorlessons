@@ -1,5 +1,18 @@
 <template name="lessonPage">
   <div class="lesson-page page">
     {{> lessonItem}}
+
+    <ul class="comments">
+		{{#each comments}}
+		{{> commentItem}}
+		{{/each}}
+	</ul>
+
+	{{#if currentUser}}
+		{{> commentSubmit}}
+	{{else}}
+		<p>Please log in to leave a comment.</p>
+	{{/if}}
+	
   </div>
 </template>
