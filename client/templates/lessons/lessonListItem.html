@@ -1,4 +1,4 @@
-<template name="lessonItem">
+<template name="lessonListItem">
   <div class="lesson">
       <div class="lesson-content">
         <h3 class="lesson-title">{{title}}</h3>
@@ -6,22 +6,13 @@
         <div>
           <span class="info">When?</span> {{date}} - {{time}}
         </div>
-        <a href="{{pathFor 'lessonPage'}}">{{commentsCount}} comments</a>
         <div>
           <span class="info">Where?</span>  {{location}}
         </div>
         <p>
-           <span class="info">Presentation</span>  {{{presentationUrl}}}
-        </p>
-        <p>
-           <span class="info">Description</span> 
-          <p></p>
-          {{{description}}}
-        </p>
-      </div>
-      <p>
           {{#if ownLesson}}<a href="{{pathFor 'lessonEdit'}}">Edit</a>{{/if}}
         </p>
+      </div>
+      <a href="{{pathFor 'lessonPage'}}" class="discuss btn btn-default">Discuss</a>
     </div>
 </template>
-
