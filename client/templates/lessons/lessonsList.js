@@ -3,3 +3,4 @@ Template.lessonsList.helpers({
     return Lessons.find();
   }
 });
+
